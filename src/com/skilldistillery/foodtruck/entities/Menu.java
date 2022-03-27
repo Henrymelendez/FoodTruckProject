@@ -12,16 +12,16 @@ public class Menu {
 		trucks = new FoodTruck[MAX_TRUCKS];
 	}
 	
-	public void displayCar() {
+	public void displayTrucks() {
 		for (FoodTruck ft : trucks) {
 			if (ft != null) {
-				System.out.println("Id : " + ft.getId() + " name : " + ft.getName() + " Food Type : " + ft.getFoodType() + " rating : " + ft.getRating());
+				System.out.println(ft.toString());
 			}
 		}
 
 	}// end of method
 	
-	public void addCar(FoodTruck truckToAdd) {
+	public void addTruck(FoodTruck truckToAdd) {
 		if (numberOfTrucks == MAX_TRUCKS) {
 			System.out.println("Lot is full come back monday");
 			
@@ -34,6 +34,6 @@ public class Menu {
 				}
 			}
 		}
-	}// end of add car
+	}// end of add truck
 
 }

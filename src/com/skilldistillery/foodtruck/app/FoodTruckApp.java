@@ -17,15 +17,15 @@ public class FoodTruckApp {
 		int i = 0;
 		boolean keepGoing = true;
 
-		while(i < 5) {
-			
+		do {
+
 			System.out.println("Please Input a Food truck");
 			System.out.println("Add Food Truck name: ");
 			name = sc.nextLine();
-			if(name.equalsIgnoreCase("quit")) {
+			if (name.equalsIgnoreCase("quit")) {
 				break;
 			}
-			
+
 			System.out.println("Add the Food Type of the truck: ");
 			foodType = sc.nextLine();
 
@@ -33,14 +33,18 @@ public class FoodTruckApp {
 			rating = sc.nextDouble();
 
 			FoodTruck one = new FoodTruck(name, foodType, rating);
-			p1.addCar(one);
+			p1.addTruck(one);
 
 			i++;
 			sc.nextLine();
-			
+
+		} while (i < 5);
+
+		keepGoing = true;
+		while (keepGoing) {
+			// TODO menu loop and methods to do math
 
 		}
-		p1.displayCar();
 
 	}
 

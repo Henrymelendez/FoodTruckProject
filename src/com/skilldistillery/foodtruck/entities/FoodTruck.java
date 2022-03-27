@@ -24,6 +24,10 @@ public class FoodTruck {
 				+ rating;
 		return output;
 	}
+	public void displaytruck() {
+		String data = toString();
+		System.out.println(data);
+	}
 
 	public static int getNextTruckId() {
 		return nextTruckId;
