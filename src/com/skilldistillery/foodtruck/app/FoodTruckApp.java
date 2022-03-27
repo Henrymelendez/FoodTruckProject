@@ -3,7 +3,7 @@ package com.skilldistillery.foodtruck.app;
 import java.util.Scanner;
 
 import com.skilldistillery.foodtruck.entities.FoodTruck; // import Truck class from package
-import com.skilldistillery.foodtruck.entities.Menu;
+import com.skilldistillery.foodtruck.entities.Menu; // import menu class that stores Food truck array and methods
 
 public class FoodTruckApp {
 
@@ -46,12 +46,25 @@ public class FoodTruckApp {
 			p1.printMenu();
 //			p1.displayTrucks();
 			int input = sc.nextInt();
-			
-			if(input == 2) {
+//			p1.calculateAverage();
+//			p1.getMax().displaytruck();
+			switch(input) {
+			case 1:
+				p1.displayTrucks();
+				break;
+			case 2:
 				p1.calculateAverage();
-			}
-		}
+				break;
+			case 3:
+				p1.getMax().displaytruck();
+				break;
+			case 4:
+				keepGoing = false;
+				
+			}// end of switch statement
+			
+		} // end of while loop 
 
-	}
+	}// end of main method
 
 }

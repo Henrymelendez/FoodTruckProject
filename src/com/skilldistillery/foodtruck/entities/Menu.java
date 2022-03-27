@@ -56,9 +56,27 @@ public class Menu {
 				sum += trucks[i].getRating();
 				count++;
 			}
-			System.out.println("Average Rating of all trucks is: " + (sum / count) );
-	}// end of method
+			System.out.println("Average Rating of all trucks is: " + (sum / count));
+		}
 
-}
+	}// end of calculate average method
+
+	public FoodTruck getMax() {
+		double max_value = 0;
+		int indexOfMax = 0;
+
+		for (int i = 0; i < numberOfTrucks; i++) {
+			if(trucks[i].getRating() > max_value) {
+				indexOfMax = i;
+				max_value = trucks[i].getRating();
+				
+			}
+		}
+		return trucks[indexOfMax];
+		
+	}// end of max value method
+	public void displayTruck() {
+		String truckData = toString();
+		System.out.println(truckData);
 	}
-	
+}
