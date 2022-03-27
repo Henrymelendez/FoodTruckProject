@@ -20,7 +20,7 @@ public class FoodTruck {
 	}
 
 	public String toString() {
-		String output = "Id=" + id + ", name=" + name + ", Food Type=" + foodType + ", rating="
+		String output = "Id= " + id + ", name= " + name + ", Food Type= " + foodType + ", rating= "
 				+ rating;
 		return output;
 	}
@@ -53,9 +53,7 @@ public class FoodTruck {
 		return rating;
 	}
 
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
+	
 
 	
 }
