@@ -20,16 +20,16 @@ public class FoodTruckApp {
 		do {
 
 			System.out.println("Please Input a Food truck");
-			System.out.println("Add Food Truck name: ");
+			System.out.print("Add Food Truck name: ");
 			name = sc.nextLine();
 			if (name.equalsIgnoreCase("quit")) {
 				break;
 			}
 
-			System.out.println("Add the Food Type of the truck: ");
+			System.out.print("Add the Food Type of the truck: ");
 			foodType = sc.nextLine();
 
-			System.out.println("Add a rating: ");
+			System.out.print("Add a rating: ");
 			rating = sc.nextDouble();
 
 			FoodTruck one = new FoodTruck(name, foodType, rating);
@@ -43,7 +43,13 @@ public class FoodTruckApp {
 		keepGoing = true;
 		while (keepGoing) {
 			// TODO menu loop and methods to do math
-
+			p1.printMenu();
+//			p1.displayTrucks();
+			int input = sc.nextInt();
+			
+			if(input == 2) {
+				p1.calculateAverage();
+			}
 		}
 
 	}
