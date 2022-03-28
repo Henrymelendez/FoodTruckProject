@@ -4,10 +4,13 @@ public class Menu {
 	private int numberOfTrucks;
 	private FoodTruck[] trucks;
 	private int MAX_TRUCKS = 5;
+	
+	
 
 	public Menu() {
 		trucks = new FoodTruck[MAX_TRUCKS];
 	}
+	
 
 	public void displayTrucks() {
 		for (FoodTruck ft : trucks) {
@@ -16,7 +19,15 @@ public class Menu {
 			}
 		}
 
-	}// end of method
+	} // end of displayTrucks method
+	
+	
+	/**
+	* This method adds an instance of a FoodTruck array to a null spot and increments the value of a 
+	* place holder value numberOfTrucks by one for use in later for loops 
+	* 
+	* @param  FoodTruck object  a FoodTruck object to be added to the FoodTruck array
+	*/
 
 	public void addTruck(FoodTruck truckToAdd) {
 		if (numberOfTrucks == MAX_TRUCKS) {
@@ -32,6 +43,14 @@ public class Menu {
 			}
 		}
 	}// end of add truck
+	
+	
+	/**
+	* This method prints a menu for the user to make choices in the main menu 
+	* 
+	* @param  none
+	*/
+
 
 	public void printMenu() {
 		System.out.println("------------------");
@@ -44,6 +63,14 @@ public class Menu {
 		System.out.println();
 		System.out.println("------------------");
 	}// end of print method
+	
+	/**
+	* This method return the average of all of the FoodTruck objects by keeping count of
+	* each FoodTruck object being summed and then using them to calculate the average 
+	* 
+	* @param  none
+	*/
+
 
 	public void calculateAverage() {
 		double sum = 0;
@@ -56,11 +83,22 @@ public class Menu {
 				sum += trucks[i].getRating();
 				count++;
 			}
-			System.out.println("Average Rating of all trucks is: " + (sum / count));
+			System.out.println("Average Rating of all trucks is: ");
+			System.out.printf("%.2f", (sum/count));
+			System.out.println();
 		}
 
 	}// end of calculate average method
+	
+	/**
+	* This method returns a FoodTruck object, the maximum value of an array of FoodTrucks objects is calculated
+	* by looping through and adding the maximum value to a place holder value and comparing it to the next value in
+	* the array then returning the FoodTruck object with the maximum value 
+	* 
+	* @param  none
+	*/
 
+	
 	public FoodTruck getMax() {
 		double max_value = 0;
 		int indexOfMax = 0;
@@ -73,8 +111,16 @@ public class Menu {
 			}
 		}
 		return trucks[indexOfMax];
+	
 		
 	}// end of max value method
+	
+	/**
+	* This method displays a single value of the FoodTruck array using the toString method
+	* 
+	* @param  none
+	*/
+
 	public void displayTruck() {
 		String truckData = toString();
 		System.out.println(truckData);

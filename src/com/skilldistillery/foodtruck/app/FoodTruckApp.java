@@ -8,7 +8,7 @@ import com.skilldistillery.foodtruck.entities.Menu; // import menu class that st
 public class FoodTruckApp {
 
 	public static void main(String[] args) {
-		// TODO an array of Food Truck objects;
+		// Initialized variables for the user input and loops
 		Scanner sc = new Scanner(System.in);
 		Menu p1 = new Menu();
 		String name = "";
@@ -31,6 +31,7 @@ public class FoodTruckApp {
 
 			System.out.print("Add a rating: ");
 			rating = sc.nextDouble();
+			
 
 			FoodTruck one = new FoodTruck(name, foodType, rating);
 			p1.addTruck(one);
@@ -42,12 +43,11 @@ public class FoodTruckApp {
 
 		keepGoing = true;
 		while (keepGoing) {
-			// TODO menu loop and methods to do math
+		
+			
 			p1.printMenu();
-//			p1.displayTrucks();
 			int input = sc.nextInt();
-//			p1.calculateAverage();
-//			p1.getMax().displaytruck();
+
 			switch(input) {
 			case 1:
 				p1.displayTrucks();
@@ -60,10 +60,14 @@ public class FoodTruckApp {
 				break;
 			case 4:
 				keepGoing = false;
-				
+				break;
+			default:
+				System.out.println("Please Pick a Valid Option");
+				break;
 			}// end of switch statement
 			
 		} // end of while loop 
+		sc.close();
 
 	}// end of main method
 
