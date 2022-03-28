@@ -6,6 +6,7 @@ public class FoodTruck {
 	private String name;
 	private String foodType;
 	private double rating;
+	
 
 	public FoodTruck() {
 
@@ -15,6 +16,12 @@ public class FoodTruck {
 		this.name = name;
 		this.foodType = foodType;
 		this.rating = rating;
+		if(rating > 5) {
+			rating %= 5;
+		}
+		else if(rating < 0) {
+			rating = 0;
+		}
 		FoodTruck.nextTruckId += 1;
 		this.id = FoodTruck.nextTruckId;
 	}

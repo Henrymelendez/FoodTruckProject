@@ -13,7 +13,7 @@ public class FoodTruckApp {
 		Menu p1 = new Menu();
 		String name = "";
 		String foodType;
-		double rating;
+		double rating = 0;
 		int i = 0;
 		boolean keepGoing = true;
 
@@ -29,8 +29,10 @@ public class FoodTruckApp {
 			System.out.print("Add the Food Type of the truck: ");
 			foodType = sc.nextLine();
 
-			System.out.print("Add a rating: ");
-			rating = sc.nextDouble();
+			
+				System.out.print("Please enter a rating 0-5: ");
+				rating = sc.nextDouble();
+			
 			
 
 			FoodTruck one = new FoodTruck(name, foodType, rating);
@@ -59,6 +61,7 @@ public class FoodTruckApp {
 				p1.getMax().displaytruck();
 				break;
 			case 4:
+				System.out.println("Goodbye.....");
 				keepGoing = false;
 				break;
 			default:
